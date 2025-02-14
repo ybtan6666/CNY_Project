@@ -1,0 +1,585 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+}
+
+.menu{
+    height: 20%;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 10% 1.5rem 10%;
+    font-weight: bold;
+}
+
+.menu p{
+    color: red;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 10%;
+    margin: 0 5% 0 5%;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-items: center ;
+    gap:5%;
+    width: 30%;
+}
+
+.menu ul button{
+    border-radius: 20px;
+    background-color: rgb(20, 171, 63);
+    padding: 0.15em;
+}
+
+.menu ul li:hover{
+    border-bottom: 2px solid lightgreen;
+}
+
+li.lihover{
+    position: relative;
+}
+
+li.lihover::after{
+    content: '';
+    border: 5px solid transparent;
+    border-top-color:lightgray;
+    position: absolute;
+    top:25%;
+    margin-left: 3px;
+}
+
+li.lihover:hover::after{
+    transform: rotate(.5turn);
+    transition: transform 150ms ease-in-out;
+}
+
+li.lihover:not(:hover)::after {
+    transform: rotate(1turn);
+    transition: transform 150ms ease-in-out;
+}
+
+/*hidden*/
+#hidden{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    padding: 1.5rem 10% 1.5rem 10%;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    background-color: white;
+}
+
+#hidden ul{
+    list-style: none;
+}
+
+#hidden ul p{
+    color: gray;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#hidden ul li{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#hidden ul,#hidden div {
+    min-width: 150px;
+    max-width: 250px;
+}
+
+#hidden div.imagehidden{
+    padding: 2%;
+    background-color: aquamarine;
+    box-sizing: border-box;
+}
+
+#hidden div.imagehidden img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50%;
+    width: 50%;
+    max-height: fit-content;
+}
+
+#hidden div.imagehidden h2{
+    text-align: center;
+    font-size: 1.15rem;
+    margin: 20px 0 20px 0;
+}
+
+#hidden div.imagehidden p{
+    color: gray;
+    text-align: center;
+}
+
+section:has(div.menu ul:last-of-type li.lihover:hover) ~ #hidden{
+    opacity: 1;
+}
+/*intro*/
+.intro{
+    background-image:url('https://png.pngtree.com/thumb_back/fh260/background/20250120/pngtree-chinese-new-year-red-lanterns-pink-background-image_16872261.jpg');
+    background-position: center;
+    background-size: 100%;
+    height: 50vh;
+    padding: 5% 15% 0 15%;
+    display: flex;
+    gap:10%;
+}
+
+.content{
+    flex:1 1 45%;
+}
+
+.content p{
+    color: white;
+}
+
+.content p:first-child{
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.content p:last-of-type{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.content a{
+    color: white;
+    font-style: italic;
+}
+
+.content h1{
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.content h1:last-of-type{
+    color: goldenrod;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 65px repeat(3, 20%) 15%;
+    background-color: white;
+    height: 90%;
+    flex:1 1 45%;
+    padding: 5px 5% 5px 5%;
+}
+
+.form h1{
+    margin-top: 5px;
+}
+
+.form button{
+    border-radius: 20px;
+    background-color: rgb(20, 171, 63);
+    margin-top: 10px;
+}
+
+.form label input{
+    border-radius: 20px;
+    outline: none;
+    border-color: aquamarine;
+    border-style: solid;
+    width: 100%;
+    height: 50%;
+}
+
+.form input::placeholder{
+    padding-left: 5px;
+}
+
+/*about*/
+.about{
+    margin: 2% 10% 2% 10%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.about h2{
+    color: red;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.about div img{
+    width: 30%;
+    aspect-ratio: 1/1;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about .first,.about .second,.about .third{
+    background-color:lightyellow;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    flex: 1 1 300px;
+    min-height: 250px;
+}
+
+/* navigation */
+#navigation{
+    margin:2% 10% 2% 10%;
+    display:flex;
+    gap:4%;
+    flex-wrap: wrap;
+}
+
+.guide{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    flex:1 1 48%;
+    margin-bottom: 20px;
+}
+
+.guide img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.guide p:first-of-type, .web ul li p:first-of-type{
+    color: red;
+    text-transform: uppercase;
+}
+
+.guide p:last-child, .web ul li p:last-child{
+    color: grey;
+    font-style: italic;
+}
+
+.web{
+    flex: 1 1 48%;
+}
+
+.web ul{
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.web ul li{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+    height: 33.33333%;
+    border-top: 2px solid lightgrey;
+}
+
+.web ul li:last-of-type{
+    border-bottom: 2px solid lightgray;
+}
+
+.web ul li .contentweb{
+    width:75%;
+    display: flex;
+    flex-direction: column;
+    gap:2px;
+    justify-content: center;
+    
+}
+
+.web ul li .image{
+    height: 80%;
+    width: 25%;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.web ul li .image img{
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+/*calendar*/
+#calendar{
+    margin:2% 10% 2% 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+#calendar > p{
+    color: darkslategray;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+#calendar > h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+#calendar .days{
+    display: grid;
+    grid-template-columns: repeat(21,1fr);
+}
+
+#calendar .days .eight{
+    grid-column: 1/8;
+    grid-row: 1;
+    background-color: red;
+}
+
+#calendar .days .eleven{
+    grid-column: 8/19;
+    grid-row: 1;
+    background-color: rgb(201, 40, 40);
+}
+
+#calendar .days .four{
+    grid-column:19/22 ;
+    grid-row: 1;
+    background-color: darkred;
+}
+#calendar .days .eight,#calendar .days .eleven,#calendar .days .four{
+    text-align: center;
+    color: white;
+    padding: 0.8rem;
+}
+
+#calendar .lines{
+    display: grid;
+    grid-template-columns: repeat(21,1fr);
+    margin-bottom: 10px;
+}
+
+#calendar .lines .fl{
+    grid-column: 1/8;
+    grid-row: 1;
+}
+
+#calendar .lines .sl{
+    grid-column: 8/19;
+    grid-row: 1;
+}
+
+#calendar .lines .tl{
+    grid-column: 19/22;
+    grid-row: 1;
+}
+
+#calendar .lines .fl p:first-child,#calendar .lines .sl p:first-child,#calendar .lines .tl p:first-child{
+    height: 20px;
+    width: 5px;
+    background-color: red;
+    margin-bottom: 2px;
+}
+
+#calendar .lines .fl p:last-of-type,#calendar .lines .sl p:last-of-type,#calendar .lines .tl p:last-of-type{
+    width: 8px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: red;
+    transform: translateX(-22.5%);
+}
+
+#calendar .lines .sl p:first-child,#calendar .lines .sl p:last-of-type{
+    background-color: rgb(201, 40, 40);
+}
+
+#calendar .lines .tl p:first-child,#calendar .lines .tl p:last-of-type{
+    background-color: darkred;
+}
+
+#calendar .introcontent{
+    display: grid;
+    grid-template-columns: repeat(21,1fr);
+}
+
+#calendar .introcontent .little{
+    grid-column: 1/8;
+    grid-row: 1;
+    width: 80%;
+}
+
+#calendar .introcontent .spring{
+    grid-column: 8/19;
+    grid-row: 1;
+    width: 80%;
+}
+
+#calendar .introcontent .lantern{
+    grid-column: 19/22;
+    grid-row: 1;
+    width: 80%;
+}
+
+#calendar .introcontent .little p:first-child,#calendar .introcontent .spring p:first-child,#calendar .introcontent .lantern p:first-child{
+    color: red;
+    text-transform: uppercase;
+}
+
+#calendar .introcontent .little h2,#calendar .introcontent .spring h2,#calendar .introcontent .lantern h2{
+    margin: 10px 0 10px 0;
+}
+
+#calendar .introcontent .little p:last-child,#calendar .introcontent .spring p:last-of-type,#calendar .introcontent .lantern p:last-of-type{
+    color: grey;
+    line-height:1.5 ;
+}
+
+/*congratulation*/
+#congratulation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+
+#congratulation h1:nth-of-type(2){
+    position: relative;
+    top:-10px;
+}
+#congratulation p{
+    text-transform: uppercase;
+}
+
+#congratulation h1{
+    font-size: 3rem;
+}
+
+#congratulation h1:last-of-type{
+    font-size: 5rem;
+    color: red;
+    letter-spacing: 5rem;
+    animation: turn 5s linear 1s 3 normal backwards;
+    position: relative;
+}
+
+@keyframes turn{
+    from{transform: translateX(-200%);}
+    to{transform: translateX(100%);}
+}
+
+/*ending*/
+#ending{
+    padding: 2% 10% 5% 10%;
+    margin-top: 1.5%;
+    background-color: lightyellow;
+}
+
+#ending .copyright{
+    padding-bottom: 20px;
+    border-bottom: 3px solid lightblue;
+    display: flex;
+    align-items: center;
+}
+
+.copyright .left{
+    margin-right: auto;
+}
+
+.copyright .left h3{
+    margin-bottom: 5px;
+}
+
+.copyright .right{
+    width: 100px;
+    height: fit-content;
+    background-color: lightseagreen;
+    position: relative;
+    padding: 0.5em;
+}
+
+.copyright .right .part{
+    float: left;
+}
+
+.copyright .right .part p{
+    text-transform: uppercase;
+}
+
+.copyright .right .logo{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid black;
+    float: right;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right:8%;
+    padding: 0.2em;
+}
+
+.copyright .right .logo .star{
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    background-color: aqua;
+}
+
+.other{
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+    margin-top: 15px;
+}
+
+.other ul{
+    flex: 1 1 150px;
+    list-style: none;
+}
+
+.other ul p{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.other ul li,.other ul h3{
+    margin-top: 15px;
+}
+
+.other ul h3{
+    margin-bottom: 15px;
+}
+
+.other ul a{
+    color: gray;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.other ul.grid-ending{
+    flex:2 1 300px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.other ul.grid-ending p{
+    grid-column: 1/3;
+}
