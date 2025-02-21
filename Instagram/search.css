@@ -1,0 +1,106 @@
+.search{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+.search .up{
+    width: 85%;
+    padding: 10px;
+    border-bottom: 1px solid var(--color);
+    margin-bottom: 20px;
+}
+
+.search .up h1{
+    text-align: center;
+}
+
+.search .up input{
+    background-color: lightgrey;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    width: 500px;
+    height: 20px;
+    padding-left: 10px;
+    margin: 10px 0;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.search .down .search-infor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.search-infor p{
+    color: blue;
+    cursor: pointer;
+}
+
+.search-infor p:hover{
+    color: lightblue;
+}
+
+.search .down ul{
+    list-style: none;
+}
+
+.search .down li{
+    display: flex;
+    gap:30px;
+    align-items: center;
+    z-index: 9000;
+    margin-bottom: 30px;
+    height: 55px;
+}
+
+.search .down li img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.search .down li div p:first-child{
+    font-weight: bold;
+}
+
+.search .down li div p:last-child{
+    color: var(--gray);
+}
+
+.search .down li span{
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.search .down li span::after,.search .down li span::before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: gray;
+}
+
+.search .down li span::before{
+    transform: rotate(45deg);
+    position: relative;
+    top:2px;
+}
+
+.search .down li span::after{
+    transform: rotate(-45deg);
+}
+
+.search .down li:hover{
+    background-color: lightgray;
+}

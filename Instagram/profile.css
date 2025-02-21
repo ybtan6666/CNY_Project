@@ -1,0 +1,188 @@
+.profile-page{
+    position: relative;
+    width: 100%;
+    margin: 0 10%;
+    padding: 50px 5%;
+    padding-bottom: 0;
+    height: fit-content;
+    border-bottom: 2px solid var(--gray);
+}
+
+.profile-part{
+    display: flex;
+}
+
+.profile-part .profile-pic img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 100px;
+}
+
+.profile-part .intro{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    font-size: 1.25em;
+}
+
+.profile-part .intro > p{
+    font-weight: bolder;
+}
+
+.profile-part .intro .follow{
+    display: flex;
+    gap: 30px;
+}
+
+.profile-part .intro .follow p::first-letter{
+    font-weight: bold;
+}
+
+.profile-part .intro .follow p:last-child{
+    cursor: pointer;
+}
+
+.profile-story{
+    margin: 50px 0;
+}
+
+.profile-story div.first{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--gray);
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.profile-story div.second{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: lightgrey;
+}
+
+.profile-story img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-55%);
+}
+
+.profile-story h3{
+    transform: translate(35px);
+}
+
+.profile-page .copyright{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+}
+
+.show-following-part{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid grey;
+    border-radius: 10px;
+    z-index: 1000;
+    background-color: var(--bg-toggle);
+    overflow-y: scroll;
+}
+
+.show-following-part .up{
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px solid grey;
+}
+
+.show-following-part .up span{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.show-following-part .up span::after, .show-following-part .up span::before{
+    width: 25px;
+    height: 2px;
+    background-color: var(--color);
+    content: '';
+    display: block;
+    transform-origin: center;
+    rotate: 0deg;
+}
+
+.show-following-part .up span::after{
+    rotate: -45deg;
+    position: relative;
+    top: -1.5px;
+}
+
+.show-following-part .up span::before{
+    rotate: 45deg;
+}
+
+.show-following-part ul{
+    padding: 15px 10px;
+    list-style: none;
+}
+
+.show-following-part ul li{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.show-following-part ul li img{
+    object-fit: cover;
+    object-position: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.show-following-part ul li div{
+    margin-right: 20px;
+}
+
+.show-following-part ul li div p:first-child{
+    font-weight: bold;
+}
+
+.show-following-part ul li div p:last-child{
+    color: var(--gray);
+}
+
+.show-following-part ul li button{
+    padding: 5px;
+    font-weight: bold;
+    margin-left: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+}

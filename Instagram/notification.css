@@ -1,0 +1,56 @@
+.notification{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+    gap:30px;
+    padding-top: 30px;
+}
+
+.notification ul{
+    list-style: none;
+}
+
+.notification ul li{
+    display: flex;
+    gap:20px;
+    margin-bottom: 30px;
+}
+
+.notification ul li img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.notification ul li div{
+    align-self: flex-start;
+}
+
+.notification ul li div p:first-child{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.notification ul li div p:last-child{
+    color: var(--gray);
+}
+
+
+
+.notification ul li button{
+    width: 70px;
+    height: 25px;
+    margin-left: auto;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: blue;
+    border:none;
+    cursor: pointer;
+    color: white;
+    align-self: center;
+    z-index: 9999; /* Bring it to front */
+}
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="explore.css" />
+    <link rel="stylesheet" href="profile.css" />
+    <link rel="stylesheet" href="notification.css" />
+    <link rel="stylesheet" href="search.css" />
+  </head>
+  <body>
+    <main class="js-main">
+      <section class="left-sidebar">
+        <div class="left-sidebar-space">
+          <img src="Images/Instagram-Logo-2010-2013.png" alt="" />
+          <ul>
+            <li class="js-home">
+              <img src="Images/home.png" alt="" />
+              <p>Home</p>
+            </li>
+            <li class="js-search">
+              <img src="Images/search.png" alt="" />
+              <p>Search</p>
+            </li>
+            <li class="js-explore">
+              <img src="Images/video.png" alt="" />
+              <p>Explore</p>
+            </li>
+            <li>
+              <img src="Images/send.png" alt="" />
+              <p>Messages</p>
+            </li>
+            <li class="js-notification">
+              <img src="Images/heart.png" alt="" />
+              <p>Notification</p>
+            </li>
+            <li class="js-profile">
+              <img src="Images/Profile.jpg" alt="" />
+              <p>Profile</p>
+            </li>
+          </ul>
+          <div class="switchappearance js-switchappearance">
+            <div class="up">
+              <span></span>
+              <h4>Switch appearance</h4>
+              <img src="" alt="" />
+            </div>
+            <div class="down">
+              <p>Dark Mode</p>
+              <div class="toggle js-toggle">
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <div class="menu-bar js-menu-bar">
+            <span></span>
+            <p>More</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-part">
+        <div class="search">
+          <div class="up">
+            <h1>Search</h1>
+            <input type="text" placeholder="search" />
+          </div>
+          <div class="down">
+            <div class="search-infor">
+              <h2>Recent</h2>
+              <p class="clear js-clear-search">Clear all</p>
+            </div>
+            <ul>
+              <li>
+                <img src="Images/Yuna.jpg" alt="" />
+                <div class="content-intro">
+                  <p>${unfollowcharacthers.id}</p>
+                  <p>${unfollowcharacthers.name}</p>
+                </div>
+                <span></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="show-following-part js-show-following-part"></div>
+
+    <script type="module" src="leftsidebar.js"></script>
+    <script src="function.js"></script>
+    <script src="switchappearance.js"></script>
+  </body>
+</html>

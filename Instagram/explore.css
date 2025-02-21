@@ -1,0 +1,76 @@
+.explore-part{
+    padding: 5% 10%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,0.5fr);
+    position: relative;
+}
+
+.explore-part div.grid{
+    position: relative;
+}
+
+.explore-part div.grid > img{
+    position: relative;
+    border: 3px solid var(--bg-color);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.explore-part div.grid:hover{
+    background-color: rgba(128,128,128,1) !important;
+}
+
+.explore-part div.grid:hover > img{
+    opacity: 0.5;
+}
+
+.explore-part div.grid .interact{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+}
+
+.explore-part div.grid .interact img{
+    width: 30px;
+    width: 30px;
+}
+
+.explore-part div.grid:hover .interact{
+    visibility: visible;
+}
+
+
+.explore-part .grid2{
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+.explore-part .grid3{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.explore-part .grid4{
+    grid-column: 3/4;
+    grid-row: 3/5;
+}
+
+.explore-part .grid5{
+    grid-column: 1/3;
+}
+
+.explore-part .copyright{
+    position: absolute;
+    margin-top: 30px;
+    text-align: center;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+}
