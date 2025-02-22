@@ -104,3 +104,13 @@
 .search .down li:hover{
     background-color: lightgray;
 }
+
+@media screen and (max-width:900px){
+    .search{
+        width: 100%;
+    }
+    
+    .search .up input{
+        width: 300px;
+    }
+}

@@ -74,3 +74,9 @@
     bottom: 50px;
     transform: translateX(-50%);
 }
+
+@media screen and (max-width:900px){
+    .explore-part .copyright{
+        bottom: 10px;
+    }
+}

@@ -186,3 +186,34 @@
     border-radius: 5px;
     border: 0;
 }
+
+@media screen and (max-width:900px) {
+    .profile-page{
+        margin: 1px 10px;
+        padding-top: 30px;
+    }
+
+    .profile-page  .profile-part .profile-pic img{
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+    } 
+
+    .profile-page  .profile-part .intro{
+        gap:20px;;
+        font-size: 0.9em;
+    }
+
+    .profile-page  .profile-part .intro .follow{
+        gap: 10px;
+    }
+
+    .profile-story{
+        margin: 20px 0;
+        font-size: 0.9em;
+    }
+
+    .profile-story .first{
+        margin-bottom: 5px;
+    }
+}
